@@ -1,2 +1,3 @@
-# javaScript_learning_projects
+# JavaScript Learning Projects
 All type of project
+Basic Projects
