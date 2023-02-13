@@ -1,5 +1,4 @@
-import url from './db.json';
-console.log(url);
+
 /*
 const form = document.querySelector('form');
 // const url = "/home/shuvo/Desktop/javaScript_learning_projects/db.json";
