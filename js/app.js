@@ -15,4 +15,16 @@ const createPost = async (e)=>{
     // window.location.replace('/');
     console.log(doc);
 }
+
+document.addEventListener('DOMContentLoaded', ()=>{
+    fetch(url)
+        .then((response)=> response.json())
+        .then((value)=>show_value(value))
+        .catch((err)=>{
+            console.log(`Fetch `+err);
+        });
+});
+
+
+
 form.addEventListener('submit',createPost);
