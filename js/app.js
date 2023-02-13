@@ -25,6 +25,10 @@ document.addEventListener('DOMContentLoaded', ()=>{
         });
 });
 
-
+function show_value(data) {
+    data.forEach(data=>{
+        console.log(data.rate, data.qty, data.type);
+    })
+}
 
 form.addEventListener('submit',createPost);
