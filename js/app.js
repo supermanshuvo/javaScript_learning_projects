@@ -1,4 +1,6 @@
-const fs = require("fs");
+
+
+/*const fs = require("fs");
 fs.readFile("../db.json", "utf8", (err, jsonString) =>{
     if (err) {
         console.log("file read failed: ",err);
@@ -11,7 +13,7 @@ fs.readFile("../db.json", "utf8", (err, jsonString) =>{
         return ;
     }
     console.log(product.rate, product.qty, product.type);
-});
+});*/
 
 
 /*
