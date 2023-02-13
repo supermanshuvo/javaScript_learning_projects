@@ -1,5 +1,7 @@
+// import url from './db.json';
+/*
 const form = document.querySelector('form');
-const url = "http://localhost:3000/testcase";
+// const url = "/home/shuvo/Desktop/javaScript_learning_projects/db.json";
 const createPost = async (e)=>{
     e.preventDefault();
     const doc = {
@@ -16,7 +18,7 @@ const createPost = async (e)=>{
     console.log(doc);
 }
 
-document.addEventListener('DOMContentLoaded', ()=>{
+window.addEventListener('DOMContentLoaded', ()=>{
     fetch(url)
         .then((response)=> response.json())
         .then((value)=>show_value(value))
@@ -31,4 +33,4 @@ function show_value(data) {
     })
 }
 
-form.addEventListener('submit',createPost);
+form.addEventListener('submit',createPost);*/
