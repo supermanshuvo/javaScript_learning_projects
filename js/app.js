@@ -5,12 +5,8 @@ fs.readFile("./db.json", "utf8", (err, data)=>{
     if (err) {
         console.log("An error occurred ",err.message);
     }else {
-        let product = JSON.parse((key, value)=>{
-            console.log('Now key');
-            console.log(key);
-            console.log('Now value');
-            console.log(value);
-        })
+        let product = JSON.parse(data)
+
         /*let stock = 0;
         for(let i = 0; i < product.length; i++){
             // console.log(product[i].rate, product[i].id);
@@ -22,7 +18,7 @@ fs.readFile("./db.json", "utf8", (err, data)=>{
                 console.log(`${product[i].id} Sell: ${product[i].qty} Rate: ${product[i].rate} Now stock is: ${stock}`);
             }
         }*/
-        // console.log(product);
+        console.log(product);
     }
 });
 
