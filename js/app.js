@@ -21,28 +21,6 @@ fs.readFile("./db.json", "utf8", (err, data)=>{
     }
 });
 
-
-
-/*function showInfo(data){
-    console.log(data);
-}*/
-
-/*const fs = require("fs");
-fs.readFile("../db.json", "utf8", (err, jsonString) =>{
-    if (err) {
-        console.log("file read failed: ",err);
-        return;
-    }
-    try {
-        const product = JSON.parse(jsonString);
-    }catch (err) {
-        console.log("Error parsing JSON string: ", err);
-        return ;
-    }
-    console.log(product.rate, product.qty, product.type);
-});*/
-
-
 /*
 const form = document.querySelector('form');
 // const url = "/home/shuvo/Desktop/javaScript_learning_projects/db.json";
