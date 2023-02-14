@@ -5,31 +5,19 @@ fs.readFile("./db.json", "utf8", (err, data)=>{
     if (err) {
         console.log("An error occurred ",err.message);
     }else {
-        let products = JSON.parse(data)
-        // console.log(product[`testcase`]);
+        let products = JSON.parse(data);
         let stock = 0;
         let product = products['testcase'];
         for(let i = 0; i < product.length; i++){
             // console.log(product[i].rate, product[i].id);
             if(product[i].type === 'in') {
                 stock += Number(product[i].qty);
-                console.log(`${product[i].id} Buy: Quantity : ${product[i].qty} Rate: ${product[i].rate} Now stock is: ${stock}`);
+                console.log(`Buy: Quantity : ${product[i].qty} Rate: ${product[i].rate}\nNow stock is: ${stock}`);
             }else if(product[i].type === 'out') {
                 stock -= Number(product[i].qty);
-                console.log(`${product[i].id} Sell: Quantity : ${product[i].qty} Rate: ${product[i].rate} Now stock is: ${stock}`);
+                console.log(`Sell: Quantity : ${product[i].qty} Rate: ${product[i].rate}\nNow stock is: ${stock}`);
             }
         }
-        /*let stock = 0;
-        for(let i = 0; i < product.length; i++){
-            // console.log(product[i].rate, product[i].id);
-            if(product[i].type === 'in') {
-                stock += Number(product[i].qty);
-                console.log(`${product[i].id} Buy: ${product[i].qty} Rate: ${product[i].rate} Now stock is: ${stock}`);
-            }else if(product[i].type === 'out') {
-                stock -= Number(product[i].qty);
-                console.log(`${product[i].id} Sell: ${product[i].qty} Rate: ${product[i].rate} Now stock is: ${stock}`);
-            }
-        }*/
     }
 });
 
