@@ -1,3 +1,4 @@
+"use strict";
 const fs = require("fs");
 // const e = require("express");
 // const {json} = require("express");
@@ -21,9 +22,8 @@ fs.readFile("./db.json", "utf8", (err, data)=>{
     }
 });
 
-/*
 const form = document.querySelector('form');
-// const url = "/home/shuvo/Desktop/javaScript_learning_projects/db.json";
+const url = "http://localhost:3000/testcase";
 const createPost = async (e)=>{
     e.preventDefault();
     const doc = {
@@ -36,23 +36,7 @@ const createPost = async (e)=>{
         body: JSON.stringify(doc),
         headers: {'Content-type': 'application/json'}
     });
-    // window.location.replace('/');
     console.log(doc);
 }
 
-window.addEventListener('DOMContentLoaded', ()=>{
-    fetch(url)
-        .then((response)=> response.json())
-        .then((value)=>show_value(value))
-        .catch((err)=>{
-            console.log(`Fetch `+err);
-        });
-});
-
-function show_value(data) {
-    data.forEach(data=>{
-        console.log(data.rate, data.qty, data.type);
-    })
-}
-
-form.addEventListener('submit',createPost);*/
+form.addEventListener('submit',createPost);
