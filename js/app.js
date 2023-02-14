@@ -1,7 +1,4 @@
-const fs = require('fs');
-let raw_data = fs.readFileSync('db.json');
-let product = JSON.parse(raw_data);
-console.log(product);
+
 
 /*const fs = require("fs");
 fs.readFile("../db.json", "utf8", (err, jsonString) =>{
