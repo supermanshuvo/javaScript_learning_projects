@@ -1,13 +1,21 @@
 const fs = require("fs");
-const e = require("express");
-const {json} = require("express");
+// const e = require("express");
+// const {json} = require("express");
 fs.readFile("./db.json", "utf8", (err, data)=>{
     if (err) {
         console.log("An error occurred ",err.message);
     }else {
         let product = JSON.parse(data)
+        let stock = 0;
         for(let i = 0; i < product.length; i++){
-            console.log(product[i].rate, product[i].id);
+            // console.log(product[i].rate, product[i].id);
+            if(product[i].type === 'in') {
+                stock += Number(product[i].qty);
+                console.log(`${product[i].id} Buy: ${product[i].qty} Rate: ${product[i].rate} Now stock is: ${stock}`);
+            }else if(product[i].type === 'out') {
+                stock -= Number(product[i].qty);
+                console.log(`${product[i].id} Sell: ${product[i].qty} Rate: ${product[i].rate} Now stock is: ${stock}`);
+            }
         }
     }
 });
