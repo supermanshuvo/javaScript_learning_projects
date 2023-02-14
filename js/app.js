@@ -1,4 +1,11 @@
+fetch("db.json")
+    .then(response => response.json())
+    .then(data => showInfo(data))
+    .catch(err => console.log(`Fetch error: `,err));
 
+function showInfo(data){
+    console.log(data);
+}
 
 /*const fs = require("fs");
 fs.readFile("../db.json", "utf8", (err, jsonString) =>{
