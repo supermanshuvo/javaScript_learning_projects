@@ -1,7 +1,5 @@
 "use strict";
 const fs = require("fs");
-// const e = require("express");
-// const {json} = require("express");
 fs.readFile("./db.json", "utf8", (err, data)=>{
     if (err) {
         console.log("An error occurred ",err.message);
@@ -10,7 +8,6 @@ fs.readFile("./db.json", "utf8", (err, data)=>{
         let stock = 0;
         let product = products['testcase'];
         for(let i = 0; i < product.length; i++){
-            // console.log(product[i].rate, product[i].id);
             if(product[i].type === 'in') {
                 stock += Number(product[i].qty);
                 console.log(`Buy: Quantity : ${product[i].qty} Rate: ${product[i].rate}\nNow stock is: ${stock}`);
