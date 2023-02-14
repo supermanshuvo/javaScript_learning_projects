@@ -1,6 +1,6 @@
 "use strict";
 const fs = require("fs");
-fs.readFile("./db.json", "utf8", (err, data)=>{
+fs.readFile("../db.json", "utf8", (err, data)=>{
     if (err) {
         console.log("An error occurred ",err.message);
     }else {
